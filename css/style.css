@@ -1,0 +1,28 @@
+body{
+    font-family: 'Muli', sans-serif;
+    margin: 0 auto;
+}
+header{
+    background: #f7f7f7;
+    color: #333;
+    padding: 20px;
+   
+}
+ul{
+    list-style:none;
+}
+h1{
+    width: 100%;
+    margin: 0px;
+    padding: 20px 0px 20px 20px;
+    background: linear-gradient(to right, #947ebf 0%, #c9628e 25%, #fa5361 50%, #fe815c 75%, #febc5b 100%);
+    color: white;
+}
+a{
+    text-decoration: none!important;
+    color: #fa5361;
+    font-weight: 700;
+    background: white;
+    padding: 5px;
+    border-radius: 3px;
+}
