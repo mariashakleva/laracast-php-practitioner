@@ -1,5 +1,7 @@
 <?php
 
+use App\Core\App;
+
 // $app = [];
 
 // $app['config'] = require 'config.php';
@@ -17,8 +19,25 @@
 // instead of storing everything in an array
 App::bind('config', require 'config.php');
 
-die(var_dump(App::get('config')));
 
 App::bind('database', new QueryBuilder(
     Connection::make(App::get('config')['database'])
 ));
+
+function view($name, $data = []){
+
+    extract($data);
+
+    //reverse than compact
+    //if we have ['name' => 'joe', 'age' => 25]
+    //extract creates variables from the keys and assigns a value ex. $name = 'joe'
+
+
+    return require "app/views/{$name}.view.php";    
+}
+
+function redirect($path){
+
+    header("Location: /{$path}");
+
+}
